@@ -92,6 +92,7 @@ export function normalizeEntities(
           entity: item,
           color: 'var(--primary-text-color)',
           accent_color: 'var(--calendar-card-line-color-vertical)',
+          split_multi_allday: false,
         };
       }
       if (typeof item === 'object' && item.entity) {
@@ -100,6 +101,7 @@ export function normalizeEntities(
           label: item.label,
           color: item.color || 'var(--primary-text-color)',
           accent_color: item.accent_color || 'var(--calendar-card-line-color-vertical)',
+          split_multi_allday: false,
         };
       }
       return null;

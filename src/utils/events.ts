@@ -383,7 +383,7 @@ export async function fetchEventData(
   // Fetch from API if needed
   Logger.info('Fetching events from API');
   const entities = config.entities.map((e) =>
-    typeof e === 'string' ? { entity: e, color: 'var(--primary-text-color)' } : e,
+    typeof e === 'string' ? { entity: e, color: 'var(--primary-text-color)', split_multi_allday: false } : e,
   );
 
   const timeWindow = getTimeWindow(config.days_to_show);
